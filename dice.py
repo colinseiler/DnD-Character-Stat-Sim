@@ -36,7 +36,7 @@ def check (maxStat, minStat, missStat, stat):
     elif stat == 3: #Checks if it is min roll
         minStat += 1
         
-    elif stat == 17: #checks if it is near miss
+    elif stat == 17: #Checks if it is near miss
         missStat += 1
         
     return maxStat, minStat, missStat, stat
@@ -61,8 +61,8 @@ def update (maxStat, missStat, minStat, maxMaxStat, count, startTime, nearMiss, 
     return nearMiss, critFail, maxMaxStat
 
 #End notification
-def done (nearMiss, critFail, startTime): 
-    print("Perfect character rolled.\n# of near misses is",nearMiss,"\n# of crit fails is",critFail,"\nTotal time elapsed",(time.time()-startTime),"seconds")
+def done (nearMiss, critFail, startTime, count): 
+    print("Perfect character rolled number",count,".\n# of near misses is",nearMiss,"\n# of crit fails is",critFail,"\nTotal time elapsed",(time.time()-startTime),"seconds")
     input()
 
 #Rolls a character
